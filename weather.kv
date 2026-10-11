@@ -1,0 +1,30 @@
+<WeatherRoot>:
+    orientation: "vertical"
+    padding: 20
+    spacing: 15
+
+    Label:
+        text: "🌤 Погода"
+        font_size: 32
+        size_hint_y: 0.15
+
+    TextInput:
+        id: city_input
+        text: root.city
+        hint_text: "Город (например, Moscow)"
+        multiline: False
+        size_hint_y: 0.15
+        on_text: root.city = self.text
+
+    Button:
+        text: "Узнать погоду"
+        size_hint_y: 0.15
+        on_press: root.get_weather()
+
+    Label:
+        text: root.result
+        font_size: 20
+        text_size: self.width - 40, None
+        halign: "center"
+        valign: "middle"
+        size_hint_y: 0.55

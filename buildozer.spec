@@ -3,7 +3,9 @@ title = Weather App
 package.name = weatherapp
 package.domain = org.weather
 
+source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
+
 version = 1.0.0
 
 requirements = python3,kivy,requests
